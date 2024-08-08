@@ -1,13 +1,12 @@
 # Customer-Transaction-Prediction-Banking-Institution-
-Customer Transaction Prediction (Kaggle Data from a Banking Institution)
 
 
-# Santander Customer Transaction Prediction
 
 Alejandro Monroy Azpeitia, [Agosto 8]
 
 ## Project Overview
 This project aims to predict which customers will make a specific transaction in the future, irrespective of the amount of money transacted. The dataset used in this project is sourced from Kaggle and provided by Santander. The project involves extensive exploratory data analysis (EDA) using PySpark with SQL-like queries to efficiently manipulate and explore data. A significant challenge addressed in this project is the binary classification problem with potentially imbalanced data.
+
 
 ## Dataset Description
 The dataset includes several CSV files with information about customer transactions. Here are the main files used:
@@ -26,7 +25,7 @@ In the EDA phase, extensive data analysis was conducted using PySpark, leveragin
 
 ## Model Training
 A separate Jupyter notebook was used to train different models. In all of them, a PCA analysis was performed to reduce the number of columns from 200 to 79, with a percentage of explained variance bigger  than 0.8.
-### XGBoost with Hyperparameter Optimization (Optuna)
+### XGBoost with Hyperparameter Optimization (XGBoost and Optuna)
 - Used Optuna for hyperparameter optimization with cross-validation.
 - Evaluated using AUC-ROC curves for training and testing data.
 - Plotted ROC curves and visualized recall, precision, and F1-Score against different probability thresholds.
@@ -34,7 +33,8 @@ A separate Jupyter notebook was used to train different models. In all of them, 
 
 
 
-### Logistic Regression with Data Balancing
+### Logistic Regression with Data Balancing (using MLlib from PySpark)
+
 - **Undersampling**: Used to address data imbalance by decreasing the mayoriy class instances.
 - **Grid Search for Hyperparameters**: Conducted using grid search to find the best parameters.
 - **Evaluation**: Assessed models using ROC curves, recall, precision, and F1-Score.
