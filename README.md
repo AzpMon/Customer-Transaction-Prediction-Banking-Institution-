@@ -1,48 +1,42 @@
-# Customer-Transaction-Prediction-Banking-Institution-
+# Predicción de Transacciones de Clientes en Instituciones Bancarias
 
+Alejandro Monroy Azpeitia, 7 de agosto de 2024
 
+## Descripción del Proyecto
+Este proyecto tiene como objetivo predecir qué clientes realizarán una transacción específica en el futuro, independientemente de la cantidad de dinero transaccionado. El conjunto de datos utilizado en este proyecto proviene de Kaggle y es proporcionado por Santander. El proyecto involucra un análisis exploratorio de datos (EDA) extenso utilizando PySpark con consultas similares a SQL para manipular y explorar los datos de manera eficiente. Un desafío significativo abordado en este proyecto es el problema de clasificación binaria con datos potencialmente desequilibrados.
 
-Alejandro Monroy Azpeitia,Agosto 8 de 2024
+## Descripción del Conjunto de Datos
+El conjunto de datos incluye varios archivos CSV con información sobre transacciones de clientes. Aquí se presentan los archivos principales utilizados:
 
-## Project Overview
-This project aims to predict which customers will make a specific transaction in the future, irrespective of the amount of money transacted. The dataset used in this project is sourced from Kaggle and provided by Santander. The project involves extensive exploratory data analysis (EDA) using PySpark with SQL-like queries to efficiently manipulate and explore data. A significant challenge addressed in this project is the binary classification problem with potentially imbalanced data.
+## Análisis Exploratorio de Datos (EDA) con PySpark y SQL
+En la fase de EDA, se realizó un análisis de datos extenso utilizando PySpark, aprovechando las consultas similares a SQL para la manipulación y exploración eficiente de datos. Se emplearon las siguientes estrategias:
 
+1. **Lectura y Carga de Datos**: El archivo CSV fue leído y cargado en un DataFrame de PySpark.
+2. **Consultas Similares a SQL**: Se utilizaron las capacidades SQL de PySpark para realizar transformaciones de datos y calcular estadísticas.
+3. **Desequilibrio de Datos**: Se abordó el desafío de los datos desequilibrados, donde el número de ejemplos positivos y negativos en la variable objetivo difiere significativamente.
+4. **Corrección de Tipos de Datos**: Se corrigieron los tipos de datos de cada columna para garantizar la consistencia y precisión.
+5. **Análisis de Valores Atípicos**: Se identificaron valores atípicos utilizando métodos estadísticos y visualizaciones.
+6. **Manejo de Valores Nulos**: Se analizaron posibles valores nulos.
+7. **Análisis de Correlación**: Se utilizaron matrices de correlación para identificar relaciones entre variables.
 
-## Dataset Description
-The dataset includes several CSV files with information about customer transactions. Here are the main files used:
+## Entrenamiento de Modelos
+Se utilizó un cuaderno de Jupyter separado para entrenar diferentes modelos. En todos ellos, se realizó un análisis PCA para reducir el número de columnas de 200 a 79, con un porcentaje de varianza explicada mayor al 0.8.
 
+### XGBoost con Optimización de Hiperparámetros (XGBoost y Optuna)
+- Se utilizó Optuna para la optimización de hiperparámetros con validación cruzada.
+- Se evaluó utilizando curvas AUC-ROC para los datos de entrenamiento y prueba.
+- Se trazaron curvas ROC y se visualizaron recall, precisión y F1-Score contra diferentes umbrales de probabilidad.
+- Se seleccionó el mejor modelo y se mostró la matriz de confusión.
 
-## Exploratory Data Analysis (EDA) with PySpark and SQL
-In the EDA phase, extensive data analysis was conducted using PySpark, leveraging SQL-like queries for efficient data manipulation and exploration. The following strategies were employed:
-
-1. **Read and Load Data**: The CSV file was read and loaded into a PySpark DataFrame.
-2. **SQL-Like Queries**: Utilized PySpark's SQL capabilities to perform  data transformations and compute statistics.
-3. **Data Imbalance**: Addressed the challenge of imbalanced data, where the number of positive and negative examples in the target variable differs significantly.
-5. **Data Type Correction**: Corrected data types of each column for consistency and accuracy.
-6. **Outlier Analysis**: Identified outliers using statistical methods and visualizations.
-7. **Handling Null Values**: Analyzed posible null values.
-8. **Correlation Analysis**: Used correlation matrices to identify relationships between variables.
-
-## Model Training
-A separate Jupyter notebook was used to train different models. In all of them, a PCA analysis was performed to reduce the number of columns from 200 to 79, with a percentage of explained variance bigger  than 0.8.
-### XGBoost with Hyperparameter Optimization (XGBoost and Optuna)
-- Used Optuna for hyperparameter optimization with cross-validation.
-- Evaluated using AUC-ROC curves for training and testing data.
-- Plotted ROC curves and visualized recall, precision, and F1-Score against different probability thresholds.
-- Selected the best model and displayed the confusion matrix.
-
-
-
-### Logistic Regression with Data Balancing (using MLlib from PySpark)
-
-- **Undersampling**: Used to address data imbalance by decreasing the mayoriy class instances.
-- **Grid Search for Hyperparameters**: Conducted using grid search to find the best parameters.
-- **Evaluation**: Assessed models using ROC curves, recall, precision, and F1-Score.
--  Selected the best model and displayed the confusion matrix.
+### Regresión Logística con Balanceo de Datos (usando MLlib de PySpark)
+- **Submuestreo**: Se utilizó para abordar el desequilibrio de datos reduciendo las instancias de la clase mayoritaria.
+- **Búsqueda en Rejilla para Hiperparámetros**: Se realizó mediante búsqueda en rejilla para encontrar los mejores parámetros.
+- **Evaluación**: Se evaluaron los modelos utilizando curvas ROC, recall, precisión y F1-Score.
+- Se seleccionó el mejor modelo y se mostró la matriz de confusión.
 
 ### Contacto
-Para cualquier pregunta o retroalimentación, contactarme en:
+Para cualquier pregunta o retroalimentación, contáctame en:
 
 amonroy.azpeitia@gmail.com
 
-https://www.linkedin.com/in/alejandromonroyazpeitia/
+[https://www.linkedin.com/in/alejandromonroyazpeitia/](https://www.linkedin.com/in/alejandromonroyazpeitia/)
