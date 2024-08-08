@@ -2,7 +2,7 @@
 
 
 
-Alejandro Monroy Azpeitia, [Agosto 8]
+Alejandro Monroy Azpeitia,Agosto 8 de 2024
 
 ## Project Overview
 This project aims to predict which customers will make a specific transaction in the future, irrespective of the amount of money transacted. The dataset used in this project is sourced from Kaggle and provided by Santander. The project involves extensive exploratory data analysis (EDA) using PySpark with SQL-like queries to efficiently manipulate and explore data. A significant challenge addressed in this project is the binary classification problem with potentially imbalanced data.
@@ -40,3 +40,9 @@ A separate Jupyter notebook was used to train different models. In all of them, 
 - **Evaluation**: Assessed models using ROC curves, recall, precision, and F1-Score.
 -  Selected the best model and displayed the confusion matrix.
 
+### Contacto
+Para cualquier pregunta o retroalimentación, contactarme en:
+
+amonroy.azpeitia@gmail.com
+
+https://www.linkedin.com/in/alejandromonroyazpeitia/
