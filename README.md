@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo predecir qué clientes realizarán una transac
 ## Descripción del Conjunto de Datos
 El conjunto de datos incluye varios archivos CSV con información sobre transacciones de clientes. Aquí se presentan los archivos principales utilizados:
 
-## Análisis Exploratorio de Datos (EDA) con PySpark y SQL
+## Análisis Exploratorio de Datos (usando  PySpark y consultas tipo SQL)
 En la fase de EDA, se realizó un análisis de datos extenso utilizando PySpark, aprovechando las consultas similares a SQL para la manipulación y exploración eficiente de datos. Se emplearon las siguientes estrategias:
 
 1. **Lectura y Carga de Datos**: El archivo CSV fue leído y cargado en un DataFrame de PySpark.
@@ -22,7 +22,7 @@ En la fase de EDA, se realizó un análisis de datos extenso utilizando PySpark,
 ## Entrenamiento de Modelos
 Se utilizó un cuaderno de Jupyter separado para entrenar diferentes modelos. En todos ellos, se realizó un análisis PCA para reducir el número de columnas de 200 a 79, con un porcentaje de varianza explicada mayor al 0.8.
 
-### XGBoost con Optimización de Hiperparámetros (XGBoost y Optuna)
+### XGBoost con Optimización de Hiperparámetros (usando XGBoost y Optuna)
 - Se utilizó Optuna para la optimización de hiperparámetros con validación cruzada.
 - Se evaluó utilizando curvas AUC-ROC para los datos de entrenamiento y prueba.
 - Se trazaron curvas ROC y se visualizaron recall, precisión y F1-Score contra diferentes umbrales de probabilidad.
